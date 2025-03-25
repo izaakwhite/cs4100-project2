@@ -19,8 +19,14 @@ g++ lex.yy.c -o scanner -ll
 
 ./scanner < plisTest.txt > tokens.txt
 
-# diff output.txt output2.txt > diff.txt
+# diff -y tokens.txt tokens_with_values.txt > diff.txt
 
 rm -f lex.yy.c
 
 rm -f scanner
+echo ""
+echo "*--------------------------------------------------------------------------------------------*"
+echo "|RAW TOKENS:                                                 VALUES & TOKENS:                |"
+echo "*--------------------------------------------------------------------------------------------*"
+echo ""
+diff -y tokens.txt tokens_with_values.txt
