@@ -1,0 +1,30 @@
+<buildnode> {
+<name> = <string>;
+<weight> = <int>;
+		};
+<for><var><in>[<int>:<int>] {
+<buildnode> {
+<name> = <string> + <var>;
+<weight> = <int> + <var> + <int>;
+<isachildof> = <string>;
+		};
+ 	}
+<for><var><in>[<int>:<int>] {
+<buildnode> {
+<name> = <string> + <var>;
+<weight> = <int>;
+<isachildof> = <string> + <var>;
+		};
+ 	}
+<for><var><in>[<int>:<int>] {
+<buildnode> {
+<name> = <string> + <var>;
+<weight> = <int>;
+<isachildof> = <string> + <var>;
+		};
+<buildnode> {
+<name> = <string> + <var>;
+<weight> = <int>;
+<isachildof> = <string> + <var>;
+		};
+		};
