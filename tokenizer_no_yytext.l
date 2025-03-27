@@ -33,7 +33,6 @@ extern FILE *yyin;
 "\+"                    { printf(" + "); }
 
 "{"                     { printf(" {\n"); }
-"};"                    { printf("\t\t};\n"); /* Prettier Printing*/}
 "}"                     { printf(" \t}\n"); }
 "\["                    { printf("["); }
 "\]"                    { printf("]"); }
