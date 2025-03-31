@@ -32,8 +32,8 @@ extern FILE *yyin;
 "="                     { printf(" = "); }
 "\+"                    { printf(" + "); }
 
-"{"                     { printf(" {\n"); }
-"}"                     { printf(" \t}\n"); }
+"{"                     { printf("{"); }
+"}"                     { printf("}"); }
 "\["                    { printf("["); }
 "\]"                    { printf("]"); }
 ";"                     { printf(";\n"); }

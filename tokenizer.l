@@ -17,8 +17,8 @@ extern FILE *yyin;
 /* Lexical rules */
 %%
 "buildnode"             { printf("<buildnode>"); }
-"name"                  { printf("<name> %s ", yytext); }
-"weight"                { printf("<weight> %s ", yytext); }
+"name"                  { printf("<name>"); }
+"weight"                { printf("<weight>"); }
 "for"                   { printf("<for>"); }
 "in"                    { printf("<in>"); }
 "isachildof"            { printf("<isachildof>");}
@@ -32,8 +32,8 @@ extern FILE *yyin;
 "="                     { printf(" = "); }
 "\+"                    { printf(" + "); }
 
-"{"                     { printf(" {\n"); }
-"}"                     { printf(" \t}\n"); }
+"{"                     { printf("{"); }
+"}"                     { printf("}"); }
 "\["                    { printf("["); }
 "\]"                    { printf("]"); }
 ";"                     { printf(";\n"); }
