@@ -7,23 +7,16 @@ g++ lex.yy.c -o scanner -ll
 
 ./scanner < plisTest.txt > tokens_with_values.txt
 
-./scanner < plisTest.txt
+make clean
 
-rm -f lex.yy.c
-
-rm -f scanner
-
-flex tokenizer_no_yytext.l
-
-g++ lex.yy.c -o scanner -ll
+make
 
 ./scanner < plisTest.txt > tokens.txt
 
 # diff -y tokens.txt tokens_with_values.txt > diff.txt
 
-rm -f lex.yy.c
+make clean
 
-rm -f scanner
 echo ""
 echo "*--------------------------------------------------------------------------------------------*"
 echo "|RAW TOKENS:                                                 VALUES & TOKENS:                |"
