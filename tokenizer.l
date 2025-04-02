@@ -23,11 +23,11 @@ extern FILE *yyin;
 "in"                    { printf("<in>"); }
 "isachildof"            { printf("<isachildof>");}
 
-\"([^\\\n]|(\\.))*?\"     { printf("<string> %s ", yytext); }
+\"([^\\\n]|(\\.))*?\"     { printf("<string : %s>", yytext); }
 
-[0-9]+                  { printf("<int> %s ", yytext); }
+[0-9]+                  { printf("<int: %s>", yytext); }
 
-[A-Za-z0-9][A-Za-z0-9_]* { printf("<var> %s ", yytext); }
+[A-Za-z0-9][A-Za-z0-9_]* { printf("<var : %s>", yytext); }
 
 "="                     { printf(" = "); }
 "\+"                    { printf(" + "); }

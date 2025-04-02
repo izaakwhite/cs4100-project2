@@ -7,8 +7,8 @@ SCANNER = scanner
 
 all: $(SCANNER)
 
-lex.yy.c: tokenizer_no_yytext.l
-	$(LEX) tokenizer_no_yytext.l
+lex.yy.c: tokenizer.l
+	$(LEX) tokenizer.l
 
 $(SCANNER): lex.yy.c
 	$(CC) -o $(SCANNER) lex.yy.c $(LFLAGS)

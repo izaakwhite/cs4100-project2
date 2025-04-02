@@ -1,15 +1,15 @@
 #!/bin/bash
 # Izaak White and Joshua Moner
 
-flex tokenizer.l
-
-g++ lex.yy.c -o scanner -ll
+make
 
 ./scanner < plisTest.txt > tokens_with_values.txt
 
 make clean
 
-make
+flex tokenizer_no_yytext.l
+
+g++ lex.yy.c -o scanner -ll
 
 ./scanner < plisTest.txt > tokens.txt
 
